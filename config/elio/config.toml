@@ -1,0 +1,16 @@
+[ui]
+show_top_bar = false
+
+[places]
+show_devices = true
+entries = [
+  "home",
+  { title = "Projects", path = "~/projects" },
+  { title = "Dotfiles", path = "~/dotfiles" },
+  "documents",
+  "downloads",
+  "pictures",
+  "videos",
+  "trash",
+]
+
