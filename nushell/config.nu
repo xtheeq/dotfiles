@@ -11,7 +11,7 @@ $env.config.keybindings ++= [
 
 alias z = zellij
 
-def --env --wrapped elio [...args] {
+def --env --wrapped e [...args] {
   let has_chooser_file = ($args | any {|arg|
     let value = ($arg | into string)
     ($value == '--chooser-file') or ($value | str starts-with '--chooser-file=')
