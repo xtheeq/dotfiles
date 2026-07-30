@@ -1,10 +1,13 @@
-theme = noctalia
-background-opacity = 0.6
 font-family = JetBrains Mono
 font-size = 12
-mouse-hide-while-typing = true
 confirm-close-surface = false
+mouse-hide-while-typing = true
 gtk-titlebar = false
 window-padding-x = 12
 window-padding-y = 12
+background-opacity = 0.7
+background-blur = 20
 command = bash -c '. ~/.bashrc && nu'
+custom-shader = cursor_warp.glsl
+
+theme = noctalia
