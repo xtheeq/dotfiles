@@ -1,31 +1,16 @@
 theme = "catppuccin_mocha"
 
+[editor.soft-wrap]
+enable = true
+
 [editor]
-line-number = "relative"
 end-of-line-diagnostics = "hint"
 
 [editor.inline-diagnostics]
 cursor-line = "error"
-
-[keys.normal.space.w]
-a = ":wa"
-[keys.normal.space.q]
-f = ":q!"
-
-[editor.soft-wrap]
-enable = true
 
 [editor.indent-guides]
 render = true
 character = "▏"
 skip-levels = 1
 
-[keys.normal.space]
-e = [
-  ':sh rm -f /tmp/unique-file',
-  ':insert-output yazi "%{buffer_name}" --chooser-file=/tmp/unique-file',
-  ':insert-output echo "\x1b[?1049h\x1b[?2004h" > /dev/tty',
-  ':open %sh{cat /tmp/unique-file}',
-  ':redraw',
-]
-g = [":new", ":sh zellij run -fc -x 0 -y 0 --height 100%% --width 100%% -- gitui", ":buffer-close!", ":redraw"]
