@@ -1,0 +1,76 @@
+[include]
+files = ["noctalia.toml"]
+
+[general]
+autostart = ["noctalia"]
+show_cheatsheet = false
+xwayland = true
+
+[input.keyboard]
+options = "caps:swapescape"
+
+[input.touchpad]
+natural_scroll = true
+accel_profile = "flat"
+
+[input.cursor]
+theme = "Bibata-Modern-Ice"
+
+[keybinds]
+"Mod+h" = "window-focus-left"
+"Mod+l" = "window-focus-right"
+"Mod+j" = "window-focus-down"
+"Mod+k" = "window-focus-up"
+"Mod+shift+h" = "column-move-left"
+"Mod+shift+l" = "column-move-right"
+"Mod+shift+j" = "window-move-down"
+"Mod+shift+k" = "window-move-up"
+"Mod+F" = "window-toggle-maximize"
+"Mod+Shift+F" = "window-toggle-fullscreen"
+"Mod+O" = "overview-toggle"
+"MOD+Q" = "window-close"
+
+"Mod+Return" = "spawn:ghostty +new-window"
+"Mod+Comma" = "workspace-previous"
+"Mod+Period" = "workspace-next"
+"Mod+Shift+Comma" = "window-move-to-workspace-previous"
+"Mod+Shift+Period" = "window-move-to-workspace-next"
+"Mod+Ctrl+Comma" = "workspace-move-up"
+"Mod+Ctrl+Period" = "workspace-move-down"
+
+"XF86AudioRaiseVolume" = "spawn:wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
+"XF86AudioLowerVolume" = "spawn:wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
+"Mod+XF86AudioMute" = "spawn:wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+"XF86AudioPlay" = "spawn:playerctl play-pause"
+"XF86AudioNext" = "spawn:playerctl next"
+"XF86AudioPrev" = "spawn:playerctl prev"
+"XF86MonBrightnessUp" = "spawn:brightnessctl s +5%"
+"XF86MonBrightnessDown" = "spawn:brightnessctl s 5%-"
+
+"SUPER+space" = "spawn:noctalia msg panel-toggle launcher"
+"SUPER+v" = "spawn:noctalia msg panel-toggle clipboard"
+"SUPER+c" = "spawn:noctalia msg settings-toggle"
+"SUPER+s" = "spawn:noctalia msg panel-toggle session"
+"SUPER+w" = "spawn:noctalia msg panel-toggle wallpaper"
+
+"Print" = "spawn:noctalia msg screenshot-region"
+"Shift+Print" = "spawn:noctalia msg plugin noctalia/screen_recorder:service all start"
+"Shift+Alt+Print" = "spawn:noctalia msg plugin noctalia/screen_recorder:service all stop"
+"Super+Alt+K" = "spawn:noctalia msg plugin h-jangra/keyviz:keylistener all toggle"
+
+
+[[window_rule]]
+match.app_id = "^dev.noctalia.Noctalia$"
+default_floating = true
+default_size = [1020, 900]
+
+[[window_rule]]
+match.app_id = "^dev.noctalia.UmbrielSharePicker$"
+default_floating = true
+default_size = [800, 600]
+
+[[layer_rule]]
+match.namespace="^noctalia-(bar-[^\"]+|notification|dock|panel|attached-panel|osd)$"
+blur = true
+blur_ignore_alpha = 0.5
+blur_optimized = false
