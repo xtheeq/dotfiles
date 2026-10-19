@@ -1,6 +1,3 @@
-[include]
-files = ["noctalia.toml"]
-
 [general]
 autostart = ["noctalia"]
 show_cheatsheet = false
@@ -11,66 +8,78 @@ options = "caps:swapescape"
 
 [input.touchpad]
 natural_scroll = true
-accel_profile = "flat"
+accel_profile = "adaptive"
 
 [input.cursor]
 theme = "Bibata-Modern-Ice"
 
 [keybinds]
+"Mod+Tab" = "window-focus-next"
 "Mod+h" = "window-focus-left"
 "Mod+l" = "window-focus-right"
 "Mod+j" = "window-focus-down"
 "Mod+k" = "window-focus-up"
-"Mod+shift+h" = "column-move-left"
-"Mod+shift+l" = "column-move-right"
-"Mod+shift+j" = "window-move-down"
-"Mod+shift+k" = "window-move-up"
-"Mod+F" = "window-toggle-maximize"
-"Mod+Shift+F" = "window-toggle-fullscreen"
-"Mod+O" = "overview-toggle"
-"MOD+Q" = "window-close"
+"Mod+Shift+h" = "column-move-left"
+"Mod+Shift+l" = "column-move-right"
+"Mod+Shift+j" = "window-move-down"
+"Mod+Shift+k" = "window-move-up"
+"Mod+F" = { action = "window-toggle-maximize", repeat = false }
+"Mod+Shift+F" = { action = "window-toggle-fullscreen", repeat = false }
+"Mod+O" = { action = "overview-toggle", repeat = false }
+"Mod+Q" = { action = "window-close", repeat = false }
 
-"Mod+Return" = "spawn:ghostty +new-window"
-"Mod+Comma" = "workspace-previous"
+"Mod+Return" = { action = "spawn:ghostty +new-window", repeat = false }
 "Mod+Period" = "workspace-next"
-"Mod+Shift+Comma" = "window-move-to-workspace-previous"
+"Mod+Comma" = "workspace-previous"
 "Mod+Shift+Period" = "window-move-to-workspace-next"
+"Mod+Shift+Comma" = "window-move-to-workspace-previous"
 "Mod+Ctrl+Comma" = "workspace-move-up"
 "Mod+Ctrl+Period" = "workspace-move-down"
 
-"XF86AudioRaiseVolume" = "spawn:wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
-"XF86AudioLowerVolume" = "spawn:wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
-"Mod+XF86AudioMute" = "spawn:wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
-"XF86AudioPlay" = "spawn:playerctl play-pause"
-"XF86AudioNext" = "spawn:playerctl next"
-"XF86AudioPrev" = "spawn:playerctl prev"
-"XF86MonBrightnessUp" = "spawn:brightnessctl s +5%"
-"XF86MonBrightnessDown" = "spawn:brightnessctl s 5%-"
+"XF86AudioRaiseVolume" = { action = "spawn:wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%+", allow_when_locked = true }
+"XF86AudioLowerVolume" = { action = "spawn:wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%-", allow_when_locked = true }
+"XF86AudioMute" = { action = "spawn:wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle", allow_when_locked = true, repeat = false }
+"Shift+XF86AudioMute" = { action = "spawn:wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle", allow_when_locked = true, repeat = false }
 
-"SUPER+space" = "spawn:noctalia msg panel-toggle launcher"
-"SUPER+v" = "spawn:noctalia msg panel-toggle clipboard"
-"SUPER+c" = "spawn:noctalia msg settings-toggle"
-"SUPER+s" = "spawn:noctalia msg panel-toggle session"
-"SUPER+w" = "spawn:noctalia msg panel-toggle wallpaper"
+"XF86MonBrightnessUp" = { action = "spawn:brightnessctl set +2%", allow_when_locked = true }
+"XF86MonBrightnessDown" = { action = "spawn:brightnessctl set 2%-", allow_when_locked = true }
 
-"Print" = "spawn:noctalia msg screenshot-region"
-"Shift+Print" = "spawn:noctalia msg plugin noctalia/screen_recorder:service all start"
-"Shift+Alt+Print" = "spawn:noctalia msg plugin noctalia/screen_recorder:service all stop"
-"Super+Alt+K" = "spawn:noctalia msg plugin h-jangra/keyviz:keylistener all toggle"
+"Alt+Tab" = { action = "spawn:noctalia msg window-switcher", repeat = false }
+"Super+space" = { action = "spawn:noctalia msg panel-toggle launcher", repeat = false }
+"Super+v" = { action = "spawn:noctalia msg panel-toggle clipboard", repeat = false }
+"Super+c" = { action = "spawn:noctalia msg settings-toggle", repeat = false }
+"Super+s" = { action = "spawn:noctalia msg panel-toggle session", repeat = false }
+"Super+w" = { action = "spawn:noctalia msg panel-toggle wallpaper", repeat = false }
 
+"Print" = { action = "spawn:noctalia msg screenshot-region", repeat = false }
+"Shift+Print" = { action = "spawn:noctalia msg plugin noctalia/screen_recorder:service all start", repeat = false }
+"Shift+Alt+Print" = { action = "spawn:noctalia msg plugin noctalia/screen_recorder:service all stop", repeat = false }
+
+[[window_rule]]
+blur = true
 
 [[window_rule]]
 match.app_id = "^dev.noctalia.Noctalia$"
 default_floating = true
-default_size = [1020, 900]
+default_floating_size_px = { width = 1020, height = 900 }
 
 [[window_rule]]
 match.app_id = "^dev.noctalia.UmbrielSharePicker$"
 default_floating = true
-default_size = [800, 600]
+default_floating_size_px = { width = 800, height = 600 }
+
+[[window_rule]]
+match.title = "^(Picture-in-Picture|Picture in picture)$"
+default_floating = true
+default_maximize = false
+default_position = { x = 20, y = 20, anchor = "bottom_right" }
 
 [[layer_rule]]
-match.namespace="^noctalia-(bar-[^\"]+|notification|dock|panel|attached-panel|osd)$"
+match.namespace = "^noctalia-(bar-[^\"]+|notification|dock|panel|attached-panel|osd|desktop-widget-[^\"]*)$"
 blur = true
 blur_ignore_alpha = 0.5
+blur_popups = true
+
+[[layer_rule]]
+match.namespace = "^noctalia-(notification|dock|panel|attached-panel|osd)$"
 blur_optimized = false
