@@ -10,6 +10,7 @@ $env.config.keybindings ++= [
 ]
 
 alias z = zellij
+alias oc = opencode
 
 def --env --wrapped e [...args] {
   let has_chooser_file = ($args | any {|arg|

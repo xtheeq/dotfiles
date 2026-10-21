@@ -7,6 +7,5 @@ ui {
 	pane_frames {
 		session_serialization false
         hide_session_name true
-        rounded_corners true
 	}
 }

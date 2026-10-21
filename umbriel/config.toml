@@ -13,6 +13,9 @@ accel_profile = "adaptive"
 [input.cursor]
 theme = "Bibata-Modern-Ice"
 
+[layout.scrolling]
+default_extent_fraction = 0.5
+
 [keybinds]
 "Mod+Tab" = "window-focus-next"
 "Mod+h" = "window-focus-left"
@@ -83,3 +86,6 @@ blur_popups = true
 [[layer_rule]]
 match.namespace = "^noctalia-(notification|dock|panel|attached-panel|osd)$"
 blur_optimized = false
+
+[include.optional]
+files = ["noctalia.toml"]
