@@ -8,12 +8,6 @@
       "variants": []
     },
     {
-      "path": "home/.bashrc",
-      "autosave": true,
-      "encrypt": false,
-      "variants": []
-    },
-    {
       "path": "home/.config/elio",
       "autosave": true,
       "encrypt": false,

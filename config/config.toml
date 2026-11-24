@@ -9,7 +9,6 @@ zig = "latest"
 zls = "latest"
 
 [dotfiles]
-"~/.bashrc" = { mode = "track" }
 "~/.config/elio" = { mode = "track" }
 "~/.config/ghostty" = { mode = "track" }
 "~/.config/gitui" = { mode = "track" }
