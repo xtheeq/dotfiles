@@ -1,0 +1,3 @@
+[[language]]
+name = "toml"
+roots = ["taplo.toml", ".taplo.toml"]

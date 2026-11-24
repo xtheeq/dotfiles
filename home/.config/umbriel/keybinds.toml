@@ -1,0 +1,55 @@
+[keybinds]
+
+"Mod+Escape" = "session-quit"
+
+"Mod+Return" = { action = "spawn zellij terminal", repeat = false }
+"Mod+e" = { action = "spawn ghostty --class=org.ghostty.elio -e /home/atheeq/.cargo/bin/elio", repeat = false }
+"Mod+D" = { action = "spawn hex dictation toggle", repeat = false }
+
+"Mod+Space" = { action = "spawn noctalia msg panel-toggle launcher", repeat = false }
+"Mod+Tab" = { action = "spawn noctalia msg window-switcher" }
+"Mod+V" = { action = "spawn noctalia msg panel-toggle clipboard", repeat = false }
+"Mod+C" = { action = "spawn noctalia msg settings-toggle", repeat = false }
+"Mod+S" = { action = "spawn noctalia msg panel-toggle session", repeat = false }
+"Mod+W" = { action = "spawn noctalia msg panel-toggle control-center network", repeat = false }
+"Mod+B" = { action = "spawn noctalia msg panel-toggle control-center bluetooth", repeat = false }
+
+"Mod+H" = "window-focus-left"
+"Mod+J" = "window-focus-down"
+"Mod+K" = "window-focus-up"
+"Mod+L" = "window-focus-right"
+
+"Mod+Shift+H" = "window-swap-left"
+"Mod+Shift+J" = "window-swap-down"
+"Mod+Shift+K" = "window-swap-up"
+"Mod+Shift+L" = "window-swap-right"
+
+"Mod+M" = { action = "window-toggle-maximize-to-edges", repeat = false }
+"Mod+F" = { action = "window-cycle-primary-extent", repeat = false }
+"Mod+Shift+F" = { action = "window-toggle-fullscreen", repeat = false }
+"Mod+Q" = { action = "window-close", repeat = false }
+
+"Mod+O" = { action = "overview-toggle", repeat = false }
+
+"Mod+Comma" = "workspace-previous"
+"Mod+Period" = "workspace-next"
+
+"Mod+Ctrl+H" = "column-move-left"
+"Mod+Ctrl+L" = "column-move-right"
+"Mod+Shift+Comma" = "column-move-to-workspace-previous"
+"Mod+Shift+Period" = "column-move-to-workspace-next"
+
+"Print" = { action = "spawn noctalia msg screenshot-region", repeat = false }
+"Alt+Print" = { action = "spawn noctalia msg screenshot-window", repeat = false }
+"Shift+Print" = { action = "spawn noctalia msg plugin noctalia/screen_recorder:service all toggle", repeat = false }
+
+"XF86AudioPrev" = { action = "spawn noctalia msg media previous", allow_when_locked = true }
+"XF86AudioPlay" = { action = "spawn noctalia msg media toggle", allow_when_locked = true, repeat = false }
+"XF86AudioNext" = { action = "spawn noctalia msg media next", allow_when_locked = true }
+"XF86AudioRaiseVolume" = { action = "spawn noctalia msg volume-up", allow_when_locked = true }
+"XF86AudioLowerVolume" = { action = "spawn noctalia msg volume-down", allow_when_locked = true }
+"XF86AudioMute" = { action = "spawn noctalia msg volume-mute", allow_when_locked = true, repeat = false }
+"Shift+XF86AudioMute" = { action = "spawn noctalia msg mic-mute", allow_when_locked = true, repeat = false }
+
+"XF86MonBrightnessUp" = { action = "spawn noctalia msg brightness-up", allow_when_locked = true }
+"XF86MonBrightnessDown" = { action = "spawn noctalia msg brightness-down", allow_when_locked = true }

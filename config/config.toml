@@ -1,0 +1,29 @@
+[tools]
+bun = "latest"
+"github:voidzero-dev/vite-plus" = "latest"
+node = "latest"
+pnpm = "latest"
+taplo = "latest"
+uv = "latest"
+zig = "latest"
+zls = "latest"
+
+[dotfiles]
+"~/.bashrc" = { mode = "track" }
+"~/.config/elio" = { mode = "track" }
+"~/.config/ghostty" = { mode = "track" }
+"~/.config/gitui" = { mode = "track" }
+"~/.config/helix" = { mode = "track" }
+"~/.config/mango" = { mode = "track" }
+"~/.config/mise/config.toml" = { mode = "track" }
+"~/.config/nushell" = { mode = "track" }
+"~/.config/starship.toml" = { mode = "track" }
+"~/.config/umbriel" = { mode = "track" }
+"~/.config/zellij" = { mode = "track" }
+
+[bootstrap.services.mise-history]
+builtin = "history-watch"
+
+[history]
+git_email = "xtheeq@gmail.com"
+exclude = ["~/.config/nushell/history.txt", "~/.config/nushell/mise.nu"]

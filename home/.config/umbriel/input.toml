@@ -1,0 +1,9 @@
+[input.cursor]
+theme = "Bibata-Modern-Ice"
+size = 24
+
+[input.keyboard]
+options = "caps:swapescape"
+
+[input.touchpad]
+natural_scroll = true

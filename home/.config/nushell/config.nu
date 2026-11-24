@@ -76,5 +76,16 @@ def --env --wrapped e [...args] {
   $env.LAST_EXIT_CODE = $status_code
 }
 
-source ~/.zoxide.nu
+# mise's generated hook script does `upsert hooks.env_change.PWD`, but Nushell
+# initializes `hooks.env_change` to null and `upsert` cannot create a key under
+# a null value (error: "Cannot find column 'PWD'"). Normalize the intermediate
+# records before loading the generated mise module.
+$env.config.hooks = ($env.config.hooks? | default {})
+$env.config.hooks.env_change = ($env.config.hooks.env_change? | default {})
 
+mkdir ($nu.data-dir | path join "vendor/autoload")
+starship init nu | save -f ($nu.data-dir | path join "vendor/autoload/starship.nu")
+
+use ($nu.default-config-dir | path join mise.nu)
+source "~/.cargo/env.nu"
+source ~/.zoxide.nu

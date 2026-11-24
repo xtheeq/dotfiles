@@ -1,0 +1,102 @@
+{
+  "format": 1,
+  "enrollment": [
+    {
+      "path": "config/config.toml",
+      "autosave": true,
+      "encrypt": false,
+      "variants": []
+    },
+    {
+      "path": "home/.bashrc",
+      "autosave": true,
+      "encrypt": false,
+      "variants": []
+    },
+    {
+      "path": "home/.config/elio",
+      "autosave": true,
+      "encrypt": false,
+      "variants": []
+    },
+    {
+      "path": "home/.config/ghostty",
+      "autosave": true,
+      "encrypt": false,
+      "variants": []
+    },
+    {
+      "path": "home/.config/gitui",
+      "autosave": true,
+      "encrypt": false,
+      "variants": []
+    },
+    {
+      "path": "home/.config/helix",
+      "autosave": true,
+      "encrypt": false,
+      "variants": []
+    },
+    {
+      "path": "home/.config/mango",
+      "autosave": true,
+      "encrypt": false,
+      "variants": []
+    },
+    {
+      "path": "home/.config/nushell",
+      "autosave": true,
+      "encrypt": false,
+      "variants": []
+    },
+    {
+      "path": "home/.config/starship.toml",
+      "autosave": true,
+      "encrypt": false,
+      "variants": []
+    },
+    {
+      "path": "home/.config/umbriel",
+      "autosave": true,
+      "encrypt": false,
+      "variants": []
+    },
+    {
+      "path": "home/.config/zellij",
+      "autosave": true,
+      "encrypt": false,
+      "variants": []
+    }
+  ],
+  "exclude": [
+    "~/.config/nushell/history.txt",
+    "~/.config/nushell/mise.nu"
+  ],
+  "recipients": [],
+  "permissions": {
+    "home/.config/elio": 511,
+    "home/.config/elio/config.toml": 511,
+    "home/.config/elio/theme.toml": 511,
+    "home/.config/ghostty/config.ghostty": 511,
+    "home/.config/ghostty/cursor_warp.glsl": 511,
+    "home/.config/ghostty/themes": 511,
+    "home/.config/ghostty/themes/noctalia": 511,
+    "home/.config/gitui": 511,
+    "home/.config/gitui/key_bindings.ron": 511,
+    "home/.config/gitui/theme.ron": 511,
+    "home/.config/helix": 511,
+    "home/.config/helix/config.toml": 511,
+    "home/.config/helix/themes": 511,
+    "home/.config/helix/themes/catppuccin_mocha.toml": 511,
+    "home/.config/mango": 511,
+    "home/.config/mango/animations.conf": 511,
+    "home/.config/mango/appearance.conf": 511,
+    "home/.config/mango/binds.conf": 511,
+    "home/.config/mango/config.conf": 384,
+    "home/.config/mango/layout.conf": 511,
+    "home/.config/mango/noctalia.conf": 511,
+    "home/.config/nushell": 511,
+    "home/.config/nushell/config.nu": 511,
+    "home/.config/umbriel": 511
+  }
+}

@@ -5,8 +5,8 @@ show_top_bar = false
 show_devices = true
 entries = [
   "home",
-  { title = "Projects", path = "~/projects" },
-  { title = "Dotfiles", path = "~/dotfiles" },
+  { title = "Projects", path = "~/Projects" },
+  { title = "Dotfiles", path = "~/Dotfiles" },
   "documents",
   "downloads",
   "pictures",
