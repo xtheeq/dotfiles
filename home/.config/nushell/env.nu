@@ -1,7 +1,5 @@
 $env.EDITOR = "hx"
 $env.JAVA_HOME = "/usr/lib/jvm/java-17-temurin-jdk"
-$env.OPENCODE_BIN = ($env.HOME | path join ".opencode" "bin")
-$env.PATH = ($env.PATH | split row (char esep) | prepend $env.OPENCODE_BIN | uniq)
 $env.ANDROID_HOME = ($env.HOME | path join "Android" "Sdk")
 $env.PATH = ($env.PATH | split row (char esep) | prepend [
   ($env.ANDROID_HOME | path join "emulator")
