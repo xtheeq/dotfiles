@@ -1,0 +1,22 @@
+# reference: https://docs.noctalia.dev/umbriel/
+
+[include]
+files = [
+  "input.toml",
+  "keybinds.toml",
+  "window-rules.toml",
+  "layer-rules.toml",
+]
+
+[include.optional]
+files = ["noctalia.toml"]
+
+[general]
+autostart = ["noctalia"]
+show_cheatsheet = false
+
+[layout]
+extent_presets = [0.5, 1]
+
+[layout.scrolling]
+default_extent_fraction = 0.5

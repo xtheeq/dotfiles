@@ -90,6 +90,7 @@
     "home/.config/mango/noctalia.conf": 511,
     "home/.config/nushell": 511,
     "home/.config/nushell/config.nu": 511,
-    "home/.config/umbriel": 511
+    "home/.config/umbriel": 511,
+    "home/.config/umbriel/config.toml.bak": 384
   }
 }
