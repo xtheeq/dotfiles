@@ -10,6 +10,8 @@ zoxide init --cmd cd nushell | save -f ~/.zoxide.nu
 
 # pnpm
 $env.PNPM_HOME = "/home/atheeq/.local/share/pnpm"
+$env.OPENCODE = "/home/atheeq/.opencode/bin"
+
 $env.PATH = ($env.PATH | split row (char esep) | prepend ($env.PNPM_HOME | path join "bin") )
 # pnpm end
 
