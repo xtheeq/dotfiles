@@ -1,13 +1,13 @@
 $env.EDITOR = "hx"
 $env.JAVA_HOME = "/usr/lib/jvm/java-17-temurin-jdk"
 $env.ANDROID_HOME = ($env.HOME | path join "Android" "Sdk")
+$env.OPENCODE = "/home/atheeq/.opencode/bin"
 $env.PATH = ($env.PATH | split row (char esep) | prepend [
   ($env.ANDROID_HOME | path join "emulator")
   ($env.ANDROID_HOME | path join "platform-tools")
 ])
 
 zoxide init --cmd cd nushell | save -f ~/.zoxide.nu
-$env.OPENCODE = "/home/atheeq/.opencode/bin"
 
 # pnpm
 $env.PNPM_HOME = "/home/atheeq/.local/share/pnpm"
